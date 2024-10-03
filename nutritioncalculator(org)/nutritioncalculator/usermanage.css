@@ -1,0 +1,28 @@
+table{
+    width: 50%;
+    height: min-content;
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
+}
+
+th, td{
+    height: 45px;
+    text-align: center;
+
+}
+.deluser, .Edit{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(192, 171, 54);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+}
+.deluser:hover , .Edit:hover{
+    background-color: white;
+    color: black;
+}
+
+.div2{
+    flex-direction: column;
+}

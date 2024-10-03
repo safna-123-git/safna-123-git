@@ -1,0 +1,160 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container3 {
+    width: 75%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+header {
+    margin: 0%;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.login-button {
+    background: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background: gray;
+}
+
+.hero {
+    background: url('./assets/hero-bg.jpg') no-repeat;
+    background-position: right;
+    background-size: contain;
+    color: #fff;
+    text-align: left;
+    padding: 50px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-container {
+    margin-left: 35%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.cta-button {
+    background: #e63946;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background: gray;
+}
+
+.about, .features, .contact, .howw {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about h2, .features h2, .contact h2, .howw h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.howw{
+    background-color: #f9f9f9;
+}
+
+.how{
+    font-size: 16px;
+    margin-bottom: 20px ;
+}
+
+.features {
+    background: #f9f9f9;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+.about, .contact
+{
+    background-image: url("./assets/gray.png");
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.linke:hover {
+    color: #e63946;
+}
