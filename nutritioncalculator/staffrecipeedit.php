@@ -32,7 +32,7 @@
                     $profileUpdateSql = $conn->query(" UPDATE `recpie` SET `dishname`='$username',`calorie`='$calorie',`protein`='$protein',`fat`='$fat',`vitamin`='$vitamin' WHERE `dishid`='$id'");
                     
                     if ($profileUpdateSql) {
-                        echo "<script>alert('Update successful'); window.location.href = 'recipemanage.php'</script>";
+                        echo "<script>alert('Update successful'); window.location.href = 'staff_recipe_management.php'</script>";
                         exit();
                     } else {
                         echo "<script>alert('Update Failed')</script>";

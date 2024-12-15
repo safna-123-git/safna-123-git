@@ -1,6 +1,4 @@
-<?php
-    include 'Adminnav.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +14,11 @@
     <div class="div2">
         <h1>MANAGE STAFF</h1>
         <?php
-        if (isset($_POST['recedit'])) {
-            $id = $_POST['recedit'];
+        if (isset($_POST['ingredit'])) {
+            $id = $_POST['ingredit'];
             $conn = mysqli_connect("localhost", "root", "", "nutritioncalculator");
              
-                $sql = $conn->query("SELECT * FROM `recpie` WHERE `dishid`='$id'");
+                $sql = $conn->query("SELECT * FROM `ingredient` WHERE `ingid`='$id'");
                 $userDetails = $sql->fetch_assoc();
                 
                 if (isset($_POST['register'])) {
@@ -29,10 +27,11 @@
                     $protein = $_POST['protein'];
                     $fat = $_POST['fat'];
                     $vitamin = $_POST['vitamin'];
-                    $profileUpdateSql = $conn->query(" UPDATE `recpie` SET `dishname`='$username',`calorie`='$calorie',`protein`='$protein',`fat`='$fat',`vitamin`='$vitamin' WHERE `dishid`='$id'");
+                    $profileUpdateSql = $conn->query(" UPDATE `ingredient` SET `ingname`='$username',`calorie`='$calorie',`protein`='$protein',`fat`='$fat',`vitamins`='$vitamin' WHERE `ingid`='$id'");
                     
                     if ($profileUpdateSql) {
-                        echo "<script>alert('Update successful'); window.location.href = 'recipemanage.php'</script>";
+                        echo "<script>alert('Update successful')</script>";
+                        header("Location: staff_incrediant_management.php");
                         exit();
                     } else {
                         echo "<script>alert('Update Failed')</script>";
@@ -43,11 +42,11 @@
             }   
         ?>
         <form method="post">
-            <input type="hidden" name="recedit" value="<?php echo htmlspecialchars($id); ?>">
+            <input type="hidden" name="ingredit" value="<?php echo htmlspecialchars($id); ?>">
             <table>
                 <tr>
                     <td>Ingredient Name:</td>
-                    <td><input required class="inp" type="text" name="username" value="<?php echo htmlspecialchars($userDetails['dishname']); ?>" placeholder="Fullname"><br></td>
+                    <td><input required class="inp" type="text" name="username" value="<?php echo htmlspecialchars($userDetails['ingname']); ?>" placeholder="Fullname"><br></td>
                 </tr>
                 <tr>
                     <td>Calorie:</td>
@@ -63,7 +62,7 @@
                 </tr>
                 <tr>
                     <td>vitamins:</td>
-                    <td><input required class="inp" type="text" name="vitamin" value="<?php echo htmlspecialchars($userDetails['vitamin']); ?>"></td>
+                    <td><input required class="inp" type="text" name="vitamin" value="<?php echo htmlspecialchars($userDetails['vitamins']); ?>"></td>
                 </tr>
                 <tr>
                     <td></td>

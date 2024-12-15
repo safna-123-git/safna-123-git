@@ -16,8 +16,8 @@
         <div class="div1">
         <h4 class="head"><a class="a1" href="UserDashboard.html">Home</a></h4>
             <h4 class="head"><a class="a1" href="user_view_recipie.php">View Recipe</a></h4>
-            <h4 class="head"><a class="a1" href="login.html">Ingredient Management</a></h4>
-            <h4 class="head"><a class="a1" href="login.html">Add Feedback</a></h4>
+            <h4 class="head"><a class="a1" href="user_ingrediant_manage.php">Ingredient Management</a></h4>
+            <!-- <h4 class="head"><a class="a1" href="login.html">Add Feedback</a></h4> -->
             <h4 class="head"><a class="a1" href="login.html">Logout</a></h4>
         </div>
     </nav>
